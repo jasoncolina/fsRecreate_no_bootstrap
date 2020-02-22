@@ -1,0 +1,419 @@
+/* Define colour variables */
+:root{
+    --greenery-: #88B04B;
+    --greenery-light: #9ABC66;
+    --orion: #404F5E;
+    --berry:#1C7ABA;
+    --berry-light:#3D8EC4;
+    --pigeon-extra-light:#EBF0F5;
+    --pigeon-light:#C8D0D8;
+}
+
+/* Document wide CSS */
+body{
+    margin:0;
+}
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+body,
+button,
+input,
+select,
+textarea{
+    font-family: sofia-pro, sans-serif;
+    color:var(--orion);
+    font-size:16px;
+    line-height:1.5;
+}
+
+button{
+  border: none;
+  border-radius: 5px;
+  padding: 0.25em 1em;
+  cursor:pointer;
+}
+
+.container{
+    overflow: hidden;
+    margin:0;
+}
+
+
+/* mainHeader CSS */
+.mainHeader{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0 15px;
+}
+
+.logo{
+    width:45px;
+    cursor: pointer;
+}
+
+.logo-alt{
+    width:200px;
+    cursor: pointer;
+    display:none;
+}
+
+.navbar{
+    background-color: white;
+    display:none;
+}
+
+.dropdownGroup{
+    list-style:none;
+    padding-left:0;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    margin: 0 1em 0 1em;
+    transition: color 0.2s;
+}
+
+.dropdown:hover {
+    color:var(--greenery-);
+}
+
+.dropdown i{
+    font-size: 0.8em;
+    transition: transform 0.2s;
+}
+
+.dropdown:hover i{
+    transform: rotate(-90deg);
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    padding: 0.5em;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+    color:var(--orion);
+}
+
+.mainHeader a:last-of-type{
+    display:none;
+}
+
+.mainHeader button{
+    background-color: var(--greenery-);
+    color:white;
+    transition:background-color 0.3s;
+}
+
+.mainHeader button:hover {
+    background-color:#5d7a30;
+}
+
+.toggler{
+    font-size: 2em;
+    color:var(--pigeon-light);
+}
+
+
+
+
+/* jumbotron CSS */
+.jumbotron{
+    background-color:var(--berry);
+    color:white;
+    text-align:center;
+    padding: 2em;
+}
+
+.jumbotron h1{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: break-word;
+    margin-top:0;
+    margin-bottom:0.2em;
+}
+
+.jumbotron blockquote{
+    font-style:italic;
+    margin-top:0;
+    max-width: 625px;
+    display:flex;
+    margin:0 auto 1em auto;
+}
+
+.jumbotron button{
+    background-color:var(--berry);
+    border: 1px solid white;
+    color:white;
+    transition: 
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.jumbotron button:hover{
+    background-color:white;
+    color: var(--berry);
+}
+
+.jumbotron button i{
+    font-size: 0.8em;
+    transition: transform 0.3s;
+}
+
+.jumbotron button:hover i{
+    transform: translate(3px, 0);
+}
+
+/* Video CSS */
+.videoShowcase{
+    text-align:center;
+}
+
+.videoShowcase hr{
+    width:40px;
+    border: 2px solid var(--greenery-);
+    border-radius: 5px;
+}
+
+.videoContainer{
+    margin: 2em 0;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.videoContainer iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+}
+
+
+/* Profiles CSS */
+.profileCard{
+    padding: 1em;
+    border: 1px solid var(--pigeon-light);
+    border-radius: 0.5em;
+    margin: 1em;
+    text-align:center;
+}
+
+.profileCard img{
+    margin: 0 auto;
+    width:100px;
+    border: 2px solid var(--greenery-);
+    border-radius:50%;
+    padding: 3px;
+    
+}
+
+.profileCard h3, h4{
+    margin: 0;
+}
+
+.profileCard h3{
+    margin-top: 0.5em;
+    color:var(--greenery-);
+    
+}
+
+
+/* dndGuide Css */
+
+.dndGuide{
+    padding: 1em;
+}
+
+.dndGuide h2{
+    text-align:center;
+}
+
+.dndGuide li{
+    list-style: none;
+}
+
+.dndGuide li::before {
+    content: "\2022";
+    color: var(--greenery-);
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -1em; 
+}
+
+.footerStory{
+    background-color: var(--orion);
+    color:white;
+    padding: 1em;
+    text-align:center;
+}
+
+.footerStory h1{
+    z-index: 5;
+}
+
+.footerStory div{
+    position:relative;
+}
+.footerStory img{
+    display:none;
+    height:40px;
+    width:50px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    transform: translate(-40%, -30%); 
+    -webkit-transform: translate(-40%, -30%);
+    -ms-transform: translate(-40%, -30%);
+}
+
+/* @media (min-width: 576px) {  
+    
+} */
+
+
+@media (min-width: 768px) {  
+    .navbar{
+        display:block;
+    }
+
+    .mainHeader a:last-of-type{
+        display:block;
+    }
+
+    .toggler{
+        display:none;
+    }
+
+    .logo{
+        display:none;
+    }
+
+    .logo-alt{
+        display:block;
+    }
+
+    .videoContainer{
+        margin: 2em auto;
+    }
+
+    .profileCard{
+        max-width:300px;
+    }
+
+    .profiles{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .videoShowcase .container{
+        width: 80%;
+    }  
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .dndGuide h2{
+        text-align: left;
+        margin-left: 1em;
+    }
+
+    .dndGuide ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+}
+
+
+@media (min-width: 1200px) {  
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .profileCard{
+        padding: 2em;
+        text-align:left;
+        display:grid;
+        justify-self: center;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: max-content;
+        grid-template-areas: 
+        "pic name"
+        "bio bio";
+    }
+    .profileCard img{
+        width:75px;
+        margin:0;
+        grid-area: pic;
+        align-self:center;
+        justify-self:center;
+    }
+
+    .profileCard h3,h4{
+        margin-top:0;
+        padding:0;
+    }
+
+    .ntContainer{
+        grid-area: name;
+        align-self:center;
+        margin-left:1em;
+    }
+    .profileCard p{
+        margin-top:1em;
+        grid-area:bio;
+    }
+
+    .footerStory .container{
+        display:grid;
+        grid-template-columns: 0.7fr 2fr;
+        grid-template-rows: 200px;
+        align-items:center;
+    }
+
+    .footerStory h1{
+        font-weight:bold;
+        font-size:4em;
+        text-align:left;
+        line-height:1;
+    }
+
+    .footerStory .container p{
+        text-align: left;
+        margin-left:1em;
+    }
+
+    .footerStory img{
+        display:block;
+    }
+}
+
+
+@media (min-width: 1600px) {  
+    .container{
+        width: 60%;
+    }
+}
+
