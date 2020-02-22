@@ -9,6 +9,7 @@
     --pigeon-light:#C8D0D8;
 }
 
+/* ==================================================================================== */
 /* Document wide CSS */
 body{
     margin:0;
@@ -44,7 +45,7 @@ button{
     margin:0;
 }
 
-
+/* ==================================================================================== */
 /* mainHeader CSS */
 .mainHeader{
     display:flex;
@@ -126,9 +127,7 @@ button{
     color:var(--pigeon-light);
 }
 
-
-
-
+/* ==================================================================================== */
 /* jumbotron CSS */
 .jumbotron{
     background-color:var(--berry);
@@ -178,6 +177,7 @@ button{
     transform: translate(3px, 0);
 }
 
+/* ==================================================================================== */
 /* Video CSS */
 .videoShowcase{
     text-align:center;
@@ -187,6 +187,10 @@ button{
     width:40px;
     border: 2px solid var(--greenery-);
     border-radius: 5px;
+}
+
+.videoShowcase .container{
+    overflow:visible;
 }
 
 .videoContainer{
@@ -203,7 +207,21 @@ button{
     height:100%;
 }
 
+.dotsContainer{
+    position:relative;
+}
 
+.dotsContainer img{
+    display:none;
+    position: absolute;
+    width:100px;
+    height:100px;
+    right:0;
+    top:0;
+    transform:translate(50%, -50%);
+}
+
+/* ==================================================================================== */
 /* Profiles CSS */
 .profileCard{
     padding: 1em;
@@ -232,9 +250,8 @@ button{
     
 }
 
-
+/* ==================================================================================== */
 /* dndGuide Css */
-
 .dndGuide{
     padding: 1em;
 }
@@ -266,13 +283,23 @@ button{
     z-index: 5;
 }
 
+.footerStory p{
+    position:relative;
+    z-index: 5;
+}
+
+.footerStory .container{
+    overflow:visible;
+}
+
 .footerStory div{
     position:relative;
 }
+
 .footerStory img{
     display:none;
-    height:40px;
-    width:50px;
+    height:70px;
+    width:90px;
     position:absolute;
     top: 0;
     left: 0;
@@ -282,11 +309,18 @@ button{
     -ms-transform: translate(-40%, -30%);
 }
 
+
+
+
+
+/* ==================================================================================== */
+/* Media Queries */
+
 /* @media (min-width: 576px) {  
     
 } */
 
-
+/* ==================================================================================== */
 @media (min-width: 768px) {  
     .navbar{
         display:block;
@@ -322,14 +356,19 @@ button{
     }
 }
 
-
+/* ==================================================================================== */
 @media (min-width: 992px) {
-    .videoShowcase .container{
-        width: 80%;
-    }  
     .container{
         width: 90%;
         margin: 0 auto;
+    }
+    
+    .videoShowcase .container{
+        width: 80%;
+    }  
+
+    .dotsContainer img{
+        display: block;
     }
 
     .dndGuide h2{
@@ -345,7 +384,7 @@ button{
 
 }
 
-
+/* ==================================================================================== */
 @media (min-width: 1200px) {  
     .container{
         width: 80%;
@@ -398,6 +437,7 @@ button{
         font-size:4em;
         text-align:left;
         line-height:1;
+        margin:0;
     }
 
     .footerStory .container p{
@@ -410,10 +450,22 @@ button{
     }
 }
 
-
+/* ==================================================================================== */
 @media (min-width: 1600px) {  
     .container{
         width: 60%;
     }
 }
 
+@media (min-width: 1920px){
+    .profiles{
+        margin: 0 auto;
+        width:90%;
+    }
+}
+/* ==================================================================================== */
+@media (min-width: 2560px) {  
+    .footerStory .container{
+        width: 50%;
+    }
+}
